@@ -1,0 +1,57 @@
+@media (max-width:720px) {
+    header{
+        width: 90%;
+    }
+  nav a{
+display: none;
+  }
+
+  header nav i {
+    font-size: 30px;
+    color: yellow;
+    opacity: 1 !important;
+  }
+
+ header nav{
+    width: 90%;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+
+  .about-info div p{
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-top: 1rem;
+  }
+
+  
+
+}
+
+@media (max-width: 396px) {
+    .info-img div img {
+      width: 300px !important;  /* Ensures the image width takes the full viewport width */
+      height: 350px !important;
+      
+    }
+
+    .info-img div{
+        display: flex;
+        justify-content: center;
+    }
+  }
+
+
+  @media (max-width:405px){
+    .info div h1 {
+        font-size: 3rem !important;
+      }
+  }
+
+
+  @media (max-width: 992px) {
+   .container {
+     max-width: 100%;
+      
+    }
+}
