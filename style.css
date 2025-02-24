@@ -1,0 +1,474 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #222222;
+  color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html{
+  overflow-x: hidden;
+}
+/* Animation */
+
+.ball {
+  position: fixed;
+  /* width: 300px;
+  height: 300px; */
+  background-color: #00FF7F;
+  animation: bounce 2s infinite;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(1px);
+  opacity: 0.5;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #00FF7F;
+  position: fixed;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.main-preview{
+  background-attachment: fixed;
+}
+/* nav bar */
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 30px;
+  gap: 50px;
+  background-color: #262626;
+  border-radius: 15px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+header nav a:before {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: -100%;
+  border-radius: 50px;
+  width: 100%;
+  padding: 2px 4px;
+  background-color: #00FF7F;
+  transition: left 0.2s linear;
+}
+
+header nav a:hover:before {
+  left: 0;
+}
+
+
+/* menu bar style */
+header nav i {
+  font-size: 30px;
+  color: white;
+  opacity: 0;
+}
+
+.menu-div{
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.932);
+  position: fixed;
+  top:-100%;
+  z-index: 998;
+  transition: all linear 0.3s;
+
+}
+
+.menu-content-div{
+  width: 100%;
+  height: 60%;
+background-color: #00FF7F;
+border-bottom-left-radius: 50px;
+border-bottom-right-radius: 50px;
+position: relative;
+
+}
+
+.close-icon{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 40px;
+  color:#262626;
+  cursor: pointer;
+}
+
+.menu-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 500;
+  padding: 2rem;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.menu-list li{
+  list-style: none;
+
+}
+
+.menu-list li a{
+  color: #262626;
+  white-space: nowrap;
+}
+
+
+.show{
+  top: 0;
+  transition: top linear 0.3s;
+}
+
+
+header nav img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+header nav div {
+  display: flex;
+  align-items: center;
+}
+
+header nav div span {
+  font-size: 1.1rem;
+  color: white;
+  margin-left: 0.5rem;
+  font-weight: 500;
+} /*  nav bar end */
+
+/* main preview start */
+.main-preview-con {
+  padding-top: 5rem;
+}
+
+.info div h1 {
+  font-size: 4rem;
+}
+
+
+
+.info div h1 span {
+  color: #00FF7F;
+}
+
+
+
+  .info-img {
+    margin-top: -20px; /* Adjust value as needed */
+  }
+
+.info-img div img {
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+  background-position: center;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border: 2px solid #00FF7F;
+  filter: brightness(0.9);
+}
+
+.info div p {
+  color: gray;
+  font-size: 1.1rem;
+} /* main preview end */
+
+/* about section */
+.about {
+  margin-top: 8rem;
+}
+
+.about .about-heading {
+  color: white;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.about-info div p {
+  font-size: 1.1rem;
+  text-align: center;
+  color: gray;
+} /* about section end */
+
+/* skill section */
+
+.skill {
+  margin-top: 8rem;
+}
+
+.skill h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.skill-row {
+  margin-top: 1rem;
+}
+
+.skill-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Let the height adjust based on content */
+}
+
+.skill-box div {
+  background-color: #262626;
+  padding: 30px;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+.skill-box div:hover {
+  transform: translateY(-15px);
+  background-color: #00FF7F;
+}
+
+.skill-box div:hover i {
+  color: white;
+}
+
+.skill-box div:hover p {
+  color: #222222;
+}
+
+.skill-box div i {
+  font-size: 3rem;
+  color: #00FF7F;
+}
+
+.skill-box div p {
+  color: rgb(206, 205, 205);
+  font-size: 1.1rem;
+  text-align: center;
+} /* skill section end */
+
+/*project*/
+.project-heading {
+  color: white;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.project-section {
+  margin-top: 8rem;
+}
+
+.project-div {
+  position: relative;
+  overflow: hidden;
+}
+
+.project div img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hover-project-details {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #06b5d4e3;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: bottom 0.3s;
+}
+
+.project-div:hover .hover-project-details {
+  bottom: 0;
+}
+
+.hover-project-details p {
+  color: #222222;
+}
+
+.hover-project-details a i {
+  background-color: white;
+  padding: 10px;
+  color: #222222;
+  border-radius: 50%;
+} /* project ends */
+
+/* contact section */
+
+.contact-section {
+  color: white;
+  font-weight: 500;
+  margin-top: 8rem;
+  z-index: 1;
+}
+
+.contact-section h1 {
+  font-size: 3rem;
+}
+
+.contact-col .p-text {
+  font-size: 1.1rem;
+}
+
+.contact-col .fa-phone {
+  -webkit-text-stroke: 2px #00FF7F; /* Add stroke */
+  color: transparent;
+  font-size: 1.5rem;
+}
+
+.contact-col .fa-envelope {
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: transparent; /* Make the fill transparent */
+  -webkit-text-stroke: 2px #00FF7F; /* Add stroke */
+}
+
+.contact-col1 input,
+textarea {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 15px;
+  padding-left: 20px;
+  border: none;
+  outline: none;
+  background-color: #262626bd;
+  border-radius: 5px;
+  caret-color: #00FF7F;
+  
+  color: white;
+}
+
+.contact-col1 textarea{
+   height: 150px;
+   resize: none;
+}
+
+.contact-col1 button {
+  margin-top: 1rem;
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 1px solid #00FF7F;
+  border-radius: 50px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.contact-col1 button:hover {
+  color: #222222;
+  background-color: #00FF7F;
+} /* contact section end */
+
+footer {
+  margin-top: 8rem;
+  padding: 40px;
+}
+
+footer p {
+  padding: 0 !important;
+  margin: 0 !important;
+  color: white;
+  text-align: center;
+}
+
+
+ .loader{
+  width: 100%;
+  height: 100%;
+  background-color: #222222;
+  z-index:999;
+  position: fixed;
+  top: 0;
+  transition: all  linear 0.3s;
+  
+}
+
+.loader h1 {
+  color: #00FF7F;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+  text-align: center;
+}
+
+
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+  background: #0a3a42; /* Darker shade of #00FF7F */
+  border-radius: 10px; 
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #00FF7F, #02899e); /* Gradient with #00FF7F shades */
+  border-radius: 10px; 
+  border: 2px solid #0a3a42; /* Border to blend with the track */
+}
+
+/* Scrollbar size */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+
+/* Hover effect on scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #02899e, #00FF7F); /* Reverse gradient on hover */
+}
+
